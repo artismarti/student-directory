@@ -6,3 +6,8 @@ puts "Veronica Mars"
 puts "Willow Rosenberg"
 puts "Cordelia Chase"
 puts "Anya Jenkins"
+puts "Arti Mathanda"
+
+print "Overall, we have "
+print 7
+puts " kick-ass students."
