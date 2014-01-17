@@ -1,13 +1,13 @@
 student_count = 7
 
 students = [
-	["Olivia Dunham", :january],
-	["Buffy Summers", :january],
-	["Veronica Mars", :january],
-	["Arya Stark", :january],
-	["Cordelia Chase", :january],
-	["Anya Jenkins", :january],
-	["Arti Mathanda", :january],
+	{:name => "Olivia Dunham", :cohort => :january},
+	{:name => "Buffy Summers", :cohort => :january},
+	{:name => "Veronica Mars", :cohort => :january},
+	{:name => "Arya Stark", :cohort => :january},
+	{:name => "Cordelia Chase", :cohort => :january},
+	{:name => "Anya Jenkins", :cohort => :january},
+	{:name => "Arti Mathanda", :cohort => :january},
 ]
 
 def print_header
@@ -17,7 +17,7 @@ end
 
 def print(students)
 	students.each do |student|
-		puts "#{student[0]} (#{student[1]} cohort)"
+		puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
