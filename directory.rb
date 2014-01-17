@@ -1,19 +1,23 @@
 student_count = 7
 
-students = ["Olivia Dunham", "Buffy Summers", "Veronica Mars", "Arya Stark", "Cordelia Chase", "Anya Jenkins", "Arti Mathanda"]
-
-students.each do |students|
-	puts students
-end
+students = [
+	["Olivia Dunham", :january],
+	["Buffy Summers", :january],
+	["Veronica Mars", :january],
+	["Arya Stark", :january],
+	["Cordelia Chase", :january],
+	["Anya Jenkins", :january],
+	["Arti Mathanda", :january],
+]
 
 def print_header
 	puts "The students of my cohort at Atlas:"
 	puts "-----------------------"
 end
 
-def print(names)
-	names.each do |name|
-		puts name
+def print(students)
+	students.each do |student|
+		puts "#{student[0]} (#{student[1]} cohort)"
 	end
 end
 
