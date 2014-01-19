@@ -17,7 +17,7 @@ end
 
 def print(students)
 	students.each_with_index.map do |student, i|
-		if student[:name].start_with?("A")
+		if student[:name].length < 12
 			puts "#{student[:name]} (#{student[:cohort]} cohort)"
 		end
 	end
