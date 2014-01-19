@@ -16,8 +16,10 @@ def print_header
 end
 
 def print(students)
-	students.each do |student|
-		puts "#{student[:name]} (#{student[:cohort]} cohort)"
+	students.each_with_index.map do |student, i|
+		if student[:name].start_with?("A")
+			puts "#{student[:name]} (#{student[:cohort]} cohort)"
+		end
 	end
 end
 
@@ -25,24 +27,24 @@ def print_footer(students)
 	puts "Overall, we have #{students.length} kick-ass students!"
 end
 
-def input_students
-	puts "Please enter the names of the students:"
-	puts "To finish, just hit return twice."
-	#create students array
-	students = []
-	#get user input
-	name = gets.chomp
-	while !name.empty? do
-		# add student hash to array
-		students << {:name => name, :cohort => :january}
-		puts "Now we have #{students.length} students."
-		name = gets.chomp
-	end
-	#return student array
-	students
-end
+#def input_students
+#	p "Please enter the names of the students:"
+#	puts "To finish, just hit return twice."
+#	#create students array
+#	students = []
+#	#get user input
+#	name = gets.chomp
+#	while !name.empty? do
+#		# add student hash to array
+#		students << {:name => name, :cohort => :january}
+#		puts "Now we have #{students.length} students."
+#		name = gets.chomp
+#	end
+#	#return student array
+#	students
+#end
 
-students = input_students
+#students = input_students
 print_header
 print(students)
 print_footer(students)
