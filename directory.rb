@@ -33,9 +33,12 @@ def input_students
 	p "Please enter the cohort of the students:"
 	puts "To finish, just hit return twice."
 	cohort = gets.chomp.upcase
+	if cohort == ""
+		cohort = "Undecided"
+	end
 	#create students array
 	students = []
-	while !name.empty? && !cohort.empty? do
+	while !name.empty? do
 		# add student hash to array
 		students << {:name => name, :cohort => cohort}
 		puts "Now we have #{students.length} students."
